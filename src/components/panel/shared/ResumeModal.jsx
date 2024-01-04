@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { postLogin } from "../../../services/apiCall";
 import { tempImageUrl } from "../../../utils/ImageUrl";
 import "../templates/Temp.css";
 
@@ -18,10 +19,24 @@ function ResumeModal({ open, setOpen, resume }) {
         const pdf = new jsPDF("p", "mm", "a4", true);
         pdf.addImage(canvas.toDataURL("image/png"), 0, 0, 210, 297);
         pdf.save(`${resume?.about?.full_name}-resume.pdf`);
+        handleDownloadUpdate();
       } else {
         toast.error("please do payment then download");
         navigate("/panel/plans");
       }
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+  const handleDownloadUpdate = async () => {
+    try {
+      postLogin.interceptors.request.use(function (config) {
+        const token = localStorage.getItem("auth_token");
+        config.headers.Authorization = `Bearer ${token}`;
+        return config;
+      });
+      const res = await postLogin.get("/user/update-download");
+      console.log("res", res);
     } catch (error) {
       console.log("error", error);
     }
@@ -46,16 +61,9 @@ function ResumeModal({ open, setOpen, resume }) {
       <Modal.Body>
         <div id="resume-view-1">
           <div className="resume">
-            <div
-              className={`resume_left ${
-                resume?.templates === "temp_two" && "temp_two"
-              }`}
-            >
+            <div className={`resume_left ${resume?.templates === "temp_two" && "temp_two"}`}>
               <div className="resume_profile">
-                <img
-                  src={tempImageUrl(resume?.about?.image)}
-                  alt="profile_pic"
-                />
+                <img src={tempImageUrl(resume?.about?.image)} alt="profile_pic" />
               </div>
               <div className="resume_content">
                 <div className="resume_item resume_info">
@@ -65,9 +73,7 @@ function ResumeModal({ open, setOpen, resume }) {
                   </div>
                   <ul>
                     <li>
-                      <div className="data">
-                        {resume?.address?.full_address}
-                      </div>
+                      <div className="data">{resume?.address?.full_address}</div>
                     </li>
                     <li>
                       <div className="data"> {resume?.address?.mobile}</div>

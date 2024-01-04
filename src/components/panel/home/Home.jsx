@@ -98,7 +98,7 @@ const Home = () => {
               <h3 className="overviewCard-title ">
                 Number <strong>Download</strong>
               </h3>
-              <p className="overviewCard-subtitle">0</p>
+              <p className="overviewCard-subtitle">{user?.download}</p>
             </div>
           </div>
         </div>
@@ -134,7 +134,18 @@ const Home = () => {
               Active <strong>Plan</strong>
             </div>
           </div>
-          <div id="chartdiv"></div>
+          <div className="chartdiv">
+            <div className="home-plan-card">
+              {user?.payment &&
+                Object.entries(user?.payment).map((el) => (
+                  <div className="plan-card" key={el?.[0]}>
+                    <h6>{el?.[0]}</h6>
+                    {console.log("el", el)}
+                    <p>{el?.[1]}</p>
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
       </main>
       <ResumeModal open={open} setOpen={setOpen} resume={selected} />
