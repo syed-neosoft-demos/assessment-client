@@ -1,0 +1,69 @@
+.plans {
+  text-align: center;
+  color: rgb(56, 51, 51);
+  background-color: #eaedf1;
+}
+.plans .title {
+  margin-top: 15px;
+}
+.plan-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 15px;
+  gap: 10px;
+}
+
+.plan-container .plan {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px 0px 15px 0px;
+  cursor: pointer;
+}
+.plan-container .plan:hover {
+  transform: translateY(-4px);
+}
+
+.plan-container .plan .heading {
+  text-align: center;
+  margin: 20px 10px 20px 10px;
+}
+
+.plan-container .plan .heading h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.plan-container .plan .listing li {
+  padding-top: 15px;
+}
+.plan-container .plan .listing svg {
+  padding-right: 8px;
+  width: 30px;
+  height: 30px;
+  color: green;
+}
+.plan-container .plan .button {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.plan-container .plan .button button {
+  padding: 10px;
+  background: #4c26bf;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .plan-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 10px;
+  }
+}

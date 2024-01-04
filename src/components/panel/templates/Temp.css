@@ -1,0 +1,231 @@
+/* RESUME TEMPLATE CSS START */
+.resume {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.resume .resume_left {
+  background: #0bb5f4;
+  flex: 1;
+}
+
+.resume .resume_left .resume_profile {
+  width: 100%;
+  height: auto;
+}
+
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: aut;
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 10px;
+}
+
+.resume .title {
+  margin-bottom: 10px;
+}
+
+.resume .resume_left .bold {
+  color: #fff;
+}
+
+.resume .resume_left .regular {
+  color: #b1eaff;
+}
+
+.resume .resume_item {
+  padding: 10px 0;
+  border-bottom: 2px solid #b1eaff;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0;
+}
+
+.resume .resume_left ul li {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume_left ul li .icon {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  color: #0bb5f4;
+  border-radius: 50%;
+  margin-right: 5px;
+  font-size: 10px;
+  position: relative;
+}
+
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resume .resume_left ul li .data {
+  color: #b1eaff;
+  font-size: 10px;
+}
+
+.resume .resume_left .resume_skills ul li {
+  display: flex;
+  margin-bottom: 5px;
+  color: #b1eaff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 25%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 2px;
+  height: 3px;
+  background: #009fd9;
+  position: relative;
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+  font-size: 10px;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.resume .resume_left .resume_social .semi-bold {
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.resume .resume_right {
+  background: #fff;
+  padding: 10px;
+  flex: 1;
+}
+
+.resume .resume_right .bold {
+  color: #0bb5f4;
+  font-size: 14px;
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.resume .resume_right ul li {
+  position: relative;
+}
+
+.resume .resume_right ul li .date {
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.resume .resume_right ul li .info {
+  margin-bottom: 10px;
+}
+
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -12px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  border: 1px solid #0bb5f4;
+}
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -10px;
+  width: 1px;
+  height: 50px;
+  background: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .resume_right .resume_hobby ul li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0bb5f4;
+  border-radius: 50%;
+  position: relative;
+  color: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 14px;
+}
+
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -26px;
+  width: 25px;
+  height: 1px;
+  background: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+
+/* template 2 css start */
+.temp_two {
+  background: #5454bf !important;
+  flex: 1;
+  color: #fff;
+}

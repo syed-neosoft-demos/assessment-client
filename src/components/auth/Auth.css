@@ -1,0 +1,134 @@
+.auth-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #eee;
+  color: rgb(0 0 0 / 85%);
+}
+.auth-layout {
+  display: flex;
+}
+.auth-aside {
+  flex: 0 0 30%;
+  padding: 100px 50px;
+}
+.auth-aside h3 {
+  color: #4c26bf;
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+.auth-aside p {
+  color: rgb(0 0 0 / 85%);
+}
+.auth-main {
+  flex: 0 0 70%;
+}
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 42%;
+  background-color: #eee;
+}
+
+.auth-main {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #eee;
+}
+
+.auth-main .signin {
+  width: 550px;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+.auth-main .signin .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.auth-main .signin .content h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.auth-main .signin .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auth-main .signin .content .form .inputBox {
+  position: relative;
+  width: 100%;
+}
+.auth-main .signin .content .form .inputBox input {
+  position: relative;
+  width: 100%;
+  background: #eee;
+  border: none;
+  outline: none;
+  padding: 12px 10px;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 4px;
+}
+.auth-main .signin .content .form .inputBox span {
+  color: red;
+}
+
+.signin .content .form .links {
+  position: relative;
+  width: 100%;
+}
+.signin .content .form .left {
+  position: relative;
+  width: 100%;
+  text-align: right;
+}
+.signin .content .form .links a {
+  color: #175cd3;
+  text-decoration: none;
+}
+
+.signin .content .form .inputBox input[type="submit"] {
+  padding: 10px;
+  background: #4c26bf;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.input-icon input {
+  position: relative;
+}
+.input-icon svg {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+input[type="submit"]:active {
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .auth-layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
