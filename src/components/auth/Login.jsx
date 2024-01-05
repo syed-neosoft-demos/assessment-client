@@ -77,9 +77,9 @@ const Login = () => {
                     onBlur={formik.handleBlur}
                   />
                   {show ? (
-                    <IoIosEye onClick={() => setShow(!show)} />
-                  ) : (
                     <IoIosEyeOff onClick={() => setShow(!show)} />
+                  ) : (
+                    <IoIosEye onClick={() => setShow(!show)} />
                   )}
 
                   {formik.errors.password && formik.touched.password && (

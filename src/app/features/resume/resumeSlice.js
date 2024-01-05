@@ -49,6 +49,10 @@ export const userSlice = createSlice({
     changeTemplate: (state, action) => {
       state.templates = action?.payload;
     },
+    updateSavedResume: (state, action) => {
+      console.log("action?.payload", action?.payload);
+      state.savedResume = action?.payload;
+    },
   },
   //FOR ASYNC ACTION
   extraReducers(builder) {
@@ -82,6 +86,7 @@ export const {
   editingRemove,
   setEditMode,
   changeTemplate,
+  updateSavedResume,
 } = userSlice.actions;
 
 export default userSlice.reducer;
